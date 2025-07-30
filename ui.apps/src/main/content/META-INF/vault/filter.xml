@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/apps/skipton/clientlibs"/>
+    <filter root="/apps/skipton/components"/>
+    <filter root="/apps/skipton/i18n"/>
+
+    <filter root="/apps/skipton/workflow"/>
+    <filter root="/apps/skipton/workflow"/>
+</workspaceFilter>

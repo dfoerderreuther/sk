@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<workspaceFilter version="1.0">
+    <filter root="/conf/skipton" mode="merge"/>
+    <filter root="/content/skipton" mode="merge"/>
+    <filter root="/content/dam/skipton" mode="merge">
+        <exclude pattern="/content/dam/skipton(/.*)?"/>
+        <include pattern="/content/dam/skipton/jcr:content(/.*)?"/>
+    </filter>
+    <filter root="/content/dam/skipton/asset.jpg" mode="merge"/>
+    <filter root="/content/experience-fragments/skipton" mode="merge"/>
+
+    <filter root="/var/workflow/models/request_for_activation" mode="update"/>
+    <filter root="/conf/global/settings/workflow/models/request_for_activation" mode="update"/>
+
+    <filter root="/var/workflow/models/replicate_to_preview" mode="update"/>
+    <filter root="/conf/global/settings/workflow/models/replicate_to_preview" mode="update"/>
+</workspaceFilter>
