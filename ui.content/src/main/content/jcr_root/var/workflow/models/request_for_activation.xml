@@ -15,10 +15,10 @@
     </variables>
     <metaData
         cq:generatingPage="/conf/global/settings/workflow/models/request_for_activation/jcr:content"
-        cq:lastModified="{Long}1752759884143"
+        cq:lastModified="{Long}1753905638232"
         cq:lastModifiedBy="admin"
         jcr:primaryType="nt:unstructured"
-        lastSynced="{Date}2025-07-17T15:44:44.141+02:00"
+        lastSynced="{Date}2025-07-30T22:00:38.227+02:00"
         multiResourceSupport="true"
         tags="wcm"/>
     <nodes jcr:primaryType="nt:unstructured">
@@ -30,18 +30,15 @@
         </node0>
         <node1
             jcr:primaryType="cq:WorkflowNode"
-            description="Approve page content"
             title="Approval"
             type="PARTICIPANT">
             <metaData
                 jcr:primaryType="nt:unstructured"
                 DIALOG_PATH="/apps/skipton/workflow/dialogs/approval/cq:dialog"
-                DO_NOTIFY="true"
                 PARTICIPANT="administrators"/>
         </node1>
         <node2
             jcr:primaryType="cq:WorkflowNode"
-            description="The Version to be activated/replicated is created"
             title="Process"
             type="PROCESS">
             <metaData
@@ -51,24 +48,15 @@
         </node2>
         <node3
             jcr:primaryType="cq:WorkflowNode"
-            description="Waiting for activation until the scheduled time is reached"
             title="OR_SPLIT"
             type="OR_SPLIT">
-            <metaData
-                jcr:primaryType="nt:unstructured"
-                PARTICIPANT="administrators"
-                timeoutHandler="com.day.cq.workflow.timeout.autoadvance.AbsoluteTimeAutoAdvancer"
-                timeoutMillis="0"/>
+            <metaData jcr:primaryType="nt:unstructured"/>
         </node3>
         <node4
             jcr:primaryType="cq:WorkflowNode"
-            description="Activates the page."
             title="OR_JOIN"
             type="OR_JOIN">
-            <metaData
-                jcr:primaryType="nt:unstructured"
-                PROCESS="com.day.cq.wcm.workflow.process.ActivatePageProcess"
-                PROCESS_AUTO_ADVANCE="true"/>
+            <metaData jcr:primaryType="nt:unstructured"/>
         </node4>
         <node5
             jcr:primaryType="cq:WorkflowNode"
@@ -118,19 +106,6 @@
         </node9>
     </nodes>
     <transitions jcr:primaryType="nt:unstructured">
-        <node3_x0023_node4
-            jcr:primaryType="cq:WorkflowTransition"
-            from="node3"
-            rule="\0"
-            to="node4">
-            <metaData jcr:primaryType="nt:unstructured"/>
-        </node3_x0023_node4>
-        <node4_x0023_node5
-            jcr:primaryType="cq:WorkflowTransition"
-            from="node4"
-            to="node5">
-            <metaData jcr:primaryType="nt:unstructured"/>
-        </node4_x0023_node5>
         <node0_x0023_node1
             jcr:primaryType="cq:WorkflowTransition"
             from="node0"
@@ -148,7 +123,6 @@
         <node2_x0023_node3
             jcr:primaryType="cq:WorkflowTransition"
             from="node2"
-            rule="\0"
             to="node3">
             <metaData jcr:primaryType="nt:unstructured"/>
         </node2_x0023_node3>
